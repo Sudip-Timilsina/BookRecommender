@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: book-recommender
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: bookrecommender.settings
+      - key: SECRET_KEY
+        value: 'django-insecure-twfan$s+jhf3qj2px^jftw%5w(a**^wz#y)ykk+y8t%2pg!diq'
+      - key: DEBUG
+        value: true
